@@ -80,221 +80,163 @@ p {
 
 /*-------------------- SLIDER------------------ */
 
-.wrapper {
-  height: 397px;
-  margin: 100px auto 0;
+/*Слайдер*/
+#slider-product {
+  /*положение слайдера*/
   position: relative;
-  width: 335px;
+  text-align: center;
+  top: 10px;
 }
 
-.slider {
-  position: relative;
+#slider-product {
+  /*центровка слайдера*/
+  margin: 0 auto;
+}
+
+#slide-show .product-img {
+  /*все изображения справа друг от доруга*/
+  width: 10%;
+  float: left;
+}
+
+#slide-show .image {
+  /*устанавливает общий размер блока с изображениями*/
+  width: 1000%;
+  line-height: 0;
+  height: 100px;
+}
+
+#thumb-img {
+  /*сркывает все, что находится за пределами этого блока*/
+  width: 100%;
   overflow: hidden;
-  top: 50%;
-  left: 50%;
-
-  height: 300px;
-  width: 230px;
-
-  background-color: #ddd;
-
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-
-  transform: translate(-50%, -50%);
+  max-height: 500px;
 }
 
-.wrapper > input {
+.product-img img {
+  /*размер изображений слайдера*/
+  width: 100%;
+}
+
+#desktop:checked ~ #slider-product {
+  /*размер всего слайдера*/
+  max-width: 960px; /*максимальная длинна*/
+}
+
+label,
+a {
+  /*при наведении на стрелки или переключатели - курсор изменится*/
+  cursor: pointer;
+}
+
+.wrapper-product input {
+  /*скрывает стандартные инпуты (чекбоксы) на странице*/
   display: none;
 }
 
-.slides {
-  height: 300px;
-  position: absolute;
-  width: 230px;
+/*позиция изображения при активации переключателя*/
+#dot1:checked ~ #slide-show .image {
+  margin-left: 0;
 }
 
-.slide1 {
-  height: 300px;
-  min-width: 230px;
-
-  background-image: url(../images/reviews0-1200+/our-products/orange-1x.jpg);
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+#dot2:checked ~ #slide-show .image {
+  margin-left: -100%;
 }
 
-.slide2 {
-  height: 300px;
-  min-width: 33230;
-
-  background-image: url(../images/reviews0-1200+/our-products/apple&cranberry-1x.jpg);
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+#dot3:checked ~ #slide-show .image {
+  margin-left: -200%;
 }
 
-.slide3 {
-  height: 300px;
-  min-width: 33230;
-
-  background-image: url(../images/reviews0-1200+/our-products/lime&seaSalt-1x.jpg);
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+#dot4:checked ~ #slide-show .image {
+  margin-left: -300%;
 }
 
-.slide4 {
-  -height: 3004px;
-  min-width: 230px;
-
-  background-image: url(../images/reviews0-1200+/our-products/pineapple-1x.jpg);
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+#dot5:checked ~ #slide-show .image {
+  margin-left: -400%;
 }
 
-.slide5 {
-  height: 300px;
-  min-width: 33230;
-
-  background-image: url(../images/reviews0-1200+/our-products/classicMilk-1x.jpg);
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+#dot6:checked ~ #slide-show .image {
+  margin-left: -500%;
 }
 
-.slide6 {
-  height: 300px;
-  min-width: 33230;
-
-  background-image: url(../images/reviews0-1200+/our-products/honey-1x.jpg);
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+#dot7:checked ~ #slide-show .image {
+  margin-left: -600%;
 }
 
-.slide7 {
-  height: 300px;
-  min-width: 33230;
-
-  background-image: url(../images/reviews0-1200+/our-products/roastedFruits-1x.jpg);
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+#dot8:checked ~ #slide-show .image {
+  margin-left: -700%;
 }
 
-.slide8 {
-  height: 300px;
-  min-width: 33230;
+/* #switch9:checked ~ #slide-show .image {
+  margin-left: -800%;
+} */
 
-  background-image: url(../images/reviews0-1200+/our-products/classicWhite-1x.jpg);
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+#slide-dot-hidden {
+  /*положение блока всех управляющих элементов*/
+  margin: -25% 0 0 0;
+  width: 100%;
+  height: 50px;
 }
 
-.wrapper .controls {
-  left: 50%;
-  margin-left: -98px;
-  position: absolute;
-}
-
-.wrapper label {
-  cursor: pointer;
-  display: inline-block;
-  height: 8px;
-  margin: 25px 12px 0 16px;
-  position: relative;
-  width: 8px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-}
-
-.wrapper label:after {
-  border: 2px solid #ddd;
-  content: ' ';
-  display: block;
+#slide-dot label {
+  /*стиль отдельного переключателя*/
+  /* border-radius: 12px;
+  
+  width: 45px;
   height: 12px;
-  left: -4px;
-  position: absolute;
-  top: -4px;
-  width: 12px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-}
-
-.wrapper label {
-  cursor: pointer;
+  background: #504f4f; */
   display: inline-block;
-  height: 8px;
-  margin: 25px 12px 0 16px;
-  position: relative;
-  width: 8px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
+  width: 13px;
+  height: 13px;
+
+  background: rgba(17, 17, 17, 0.1);
+
   border-radius: 50%;
-  -webkit-transition: background ease-in-out 0.5s;
-  -moz-transition: background ease-in-out 0.5s;
-  -o-transition: background ease-in-out 0.5s;
-  transition: background ease-in-out 0.5s;
 }
 
-.wrapper label:hover,
-#slide1:checked ~ .controls label:nth-of-type(1),
-#slide2:checked ~ .controls label:nth-of-type(2),
-#slide3:checked ~ .controls label:nth-of-type(3),
-#slide4:checked ~ .controls label:nth-of-type(4),
-#slide5:checked ~ .controls label:nth-of-type(5),
-#slide6:checked ~ .controls label:nth-of-type(6),
-#slide7:checked ~ .controls label:nth-of-type(7),
-#slide8:checked ~ .controls label:nth-of-type(8) {
-  background: #ddd;
+#slide-dot {
+  /*расположение блока с переключателями*/
+  margin: 23% 0 0;
+  text-align: center;
 }
 
-.slides {
-  height: inherit;
-  opacity: 0;
-  position: absolute;
-  width: inherit;
-  z-index: 0;
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
-  -moz-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
-  -o-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
-  transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+#slide-dot label:hover {
+  /*поведение чекбокса при наведении*/
+  background: #7a1277;
+  border-color: #403939 !important; /*выполнение в любом случае*/
 }
 
-#slide1:checked ~ .slider > .slide1,
-#slide2:checked ~ .slider > .slide2,
-#slide3:checked ~ .slider > .slide3,
-#slide4:checked ~ .slider > .slide4,
-#slide5:checked ~ .slider > .slide5,
-#slide6:checked ~ .slider > .slide6,
-#slide7:checked ~ .slider > .slide7,
-#slide8:checked ~ .slider > .slide8 {
-  opacity: 1;
-  z-index: 1;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
+/*цвет активного лейбла при активации чекбокса*/
+#dot1:checked ~ #slide-dot label:nth-child(1),
+#dot2:checked ~ #slide-dot label:nth-child(2),
+#dot3:checked ~ #slide-dot label:nth-child(3),
+#dot4:checked ~ #slide-dot label:nth-child(4),
+#dot5:checked ~ #slide-dot label:nth-child(5),
+#dot6:checked ~ #slide-dot label:nth-child(6),
+#dot7:checked ~ #slide-dot label:nth-child(7),
+ #dot8:checked ~ #slide-dot label:nth-child(8)/*,
+#switch9:checked ~ #slide-dot label:nth-child(9) */ {
+  /* background: #1463a7;
+  border-color: #3867d7 !important; */
+  width: 28px;
+  height: 13px;
+
+  background: #fd9222;
+
+  border-radius: 0;
+}
+
+#slide-show .image {
+  /*анимация пролистывания изображений*/
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#slide-dot-hidden label:hover {
+  /*прозрачность стрелок при наведении*/
+  opacity: 0.6;
+}
+
+#slide-dot-hidden label {
+  /*прозрачность стрелок при отводе курсора*/
+  transition: opacity 0.2s ease-out;
 }
