@@ -1,11 +1,13 @@
-function createArrayOfNumbers(min, max) {
-  const numbers = [];
+function includes(array, value) {
   // Change code below this line
-  for (let i = min; i <= max; i += 1) {
-    numbers += i;
-  }
+for (let i = 0; i <= array.length; i++) {
+  const arrayElement= array[i];
+  
+  if (value === arrayElement) {
+    return true;
+  } 
+}
+  return false;
   // Change code above this line
-  console.log(numbers);
 }
 
-createArrayOfNumbers(1, 3);
