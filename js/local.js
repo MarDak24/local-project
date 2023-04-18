@@ -1,13 +1,13 @@
-function includes(array, value) {
-  // Change code below this line
-for (let i = 0; i <= array.length; i++) {
-  const arrayElement= array[i];
-  
-  if (value === arrayElement) {
-    return true;
-  } 
-}
-  return false;
-  // Change code above this line
-}
+// Change code below this line
+function filterArray(numbers, value) {
+  const filteredNumbers = [];
 
+  numbers.forEach(function (number) {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  });
+
+  // Change code above this line
+  return filteredNumbers;
+}
