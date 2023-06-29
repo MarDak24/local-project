@@ -1,0 +1,59 @@
+.wrapper {
+  /* BODY */
+  background: #f6f6f6;
+
+  background: #202024;
+
+  /* HEADER */
+  border: 1.5px solid #111;
+  background-color: #fff;
+
+  background: #111;
+  border: 1.5px solid #fff;
+
+  /*вибір категорій  */
+  /* скролл */
+  background: #e0e0e0;
+
+  background: rgba(17, 17, 17, 0.6);
+
+  /* весь текст такого кольору перетворюється */
+  color: rgba(17, 17, 17, 0.6);
+
+  color: rgba(255, 255, 255, 0.6);
+
+  /* картка книги назва*/
+  color: #111;
+
+  color: #fff;
+
+  /*  текст ховер/фокус/актів*/
+  color: #4f2ee8;
+
+  color: #eac645;
+
+  /* цифри в шопінг листі */
+  border: 1px solid #111;
+  background: #111;
+  /* сама цифра */
+  color: #fff;
+
+  border: 1px solid #fff;
+  background: #fff;
+  /* сама цифра */
+  color: #111;
+
+  /* поп ап бордер */
+  border: 2px solid #111;
+
+  border: 2px solid #fff;
+
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+  /*  */
+}
