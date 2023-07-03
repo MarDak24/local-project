@@ -14,7 +14,7 @@ function toggleTheme() {
 
 function applyTheme(themeName) {
   const themeStylesheet = document.querySelector('[title="theme"]');
-  themeStylesheet.setAttribute('href', `./css/${themeName}.css`);
+  themeStylesheet.setAttribute('href', `css/${themeName}.css`);
 }
 
 function saveTheme(themeName) {
