@@ -14,10 +14,10 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
   
-  
-  <script type="module" crossorigin src="/local-project/assets/index-e88dc2aa.js"></script>
+  <link rel="stylesheet" title="theme" href="#">
+  <script type="module" crossorigin src="/local-project/assets/index-3d5923b0.js"></script>
   <link rel="modulepreload" crossorigin href="/local-project/assets/shopping-d1736e32.js">
-  <link rel="stylesheet" href="/local-project/assets/index-4e8c043c.css">
+  <link rel="stylesheet" href="/local-project/assets/index-63828dcc.css">
 </head>
 
 <body>
@@ -190,37 +190,7 @@
   <a href="./shoppinglist.html">link to Shopping Page</a>
   <!-- ENOENT: no such file or directory, open '/home/runner/work/local-project/local-project/src/Shopping/shoppingList.html' -->
   
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const themeSwitcher = document.querySelector('.switcher');
-
-      themeSwitcher.addEventListener('click', function () {
-        toggleTheme();
-      });
-
-      function toggleTheme() {
-        const isDarkMode = themeSwitcher.classList.toggle('dark-theme');
-        const themeName = isDarkMode ? 'dark' : 'light';
-        applyTheme(themeName);
-        saveTheme(themeName);
-      }
-
-      function applyTheme(themeName) {
-        const themeStylesheet = document.querySelector('[title="theme"]');
-        themeStylesheet.setAttribute('href', `./css/${themeName}.css`);
-      }
-
-      function saveTheme(themeName) {
-        localStorage.setItem('theme', themeName);
-      }
-
-      const activeTheme = localStorage.getItem('theme');
-      if (activeTheme) {
-        themeSwitcher.classList.add(activeTheme);
-        applyTheme(activeTheme);
-      }
-    });
-  </script>
+ 
 </body>
 
 </html>
