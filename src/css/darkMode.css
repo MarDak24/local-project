@@ -2,12 +2,14 @@
   left: 68%;
 }
 
-body.dark {
+body.dark,
+.book-modal.dark {
   background: #202024;
 }
 
 .general-header.dark,
-.general-header.mob-menu-container.dark {
+.general-header.mob-menu-container.dark,
+.mob-menu-leveling.dark {
   background: #111;
   border: 1.5px solid #fff;
   border-radius: 0px 0px 8px 8px;
@@ -17,24 +19,30 @@ body.dark {
   fill: #f3f3f3;
 }
 
-.gallery-heading.dark {
-  color: #fff;
-}
-
 .see-more.dark {
   background: #202024;
   color: #fff;
 }
 
+.gallery-heading.dark,
 .gallery-books-title.dark,
 .shopping-title.dark,
 .choosenbook-title.dark,
-.choosenbook-descr.dark {
+.choosenbook-descr.dark,
+.header-shopping-text.dark,
+.add-btn.dark,
+.choosenbook-popup-title.dark,
+.choosenbook-popup-descr.dark {
   color: #fff;
 }
 
-.icon-open.dark {
+.icon-open.dark,
+.close-icon.dark {
   stroke: #fff;
+}
+
+.icon-untitled-header.dark {
+  stroke: rgba(17, 17, 17, 1);
 }
 
 .categories-link.dark {
